@@ -17,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/customers', 'CustomersController@index');
+
+Route::get('/todoa', function (Request $request){
+    return 'Hello World';
+});
